@@ -62,3 +62,27 @@ Implemented `commit_create`. This function snapshots the index into a tree, link
 
 ## 5. Conclusion
 This lab successfully demonstrated the core mechanics of a Version Control System. By implementing the object store and the reference chain, I have gained a deep understanding of how Git maintains data integrity and tracks project history through content-addressable sharding.
+---
+
+## 6. How to Build and Run
+
+### Compilation
+To compile the PES-VCS project, run the following command in your terminal:
+```bash
+make
+# OR if you don't have a Makefile:
+# gcc -o pes object.c tree.c index.c commit.c main.c -lcrypto
+Usage Commands
+
+Here are the basic commands to use the Version Control System:
+# 1. Initialize a new repository
+./pes init
+
+# 2. Add files to the staging area
+./pes add <filename>
+
+# 3. Commit the staged changes
+./pes commit -m "Your commit message"
+
+# 4. Check the status of the working directory
+./pes status
